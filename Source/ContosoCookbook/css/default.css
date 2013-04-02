@@ -1,0 +1,172 @@
+﻿html {
+    cursor: default;
+}
+
+#contenthost {
+    height: 100%;
+    width: 100%;
+    background: url('../images/theme/background.jpg') repeat;
+    color: #484036;
+}
+
+.fragment {
+    /* Define a grid with rows for a banner and a body */
+    -ms-grid-columns: 1fr;
+    -ms-grid-rows: 133px 1fr 0px;
+    display: -ms-grid;
+    height: 100%;
+    width: 100%;
+}
+
+    .fragment header[role=banner] {
+        /* Define a grid with columns for the back button and page title. */
+        -ms-grid-columns: 120px 1fr;
+        -ms-grid-rows: 1fr;
+        display: -ms-grid;
+    }
+
+        .fragment header[role=banner] .win-backbutton {
+            margin-left: 39px;
+            margin-top: 59px;
+        }
+
+        .fragment header[role=banner] .titlearea {
+            -ms-grid-column: 2;
+            margin-top: 37px;
+        }
+
+            .fragment header[role=banner] .titlearea .pagetitle {
+                width: calc(100% - 20px);
+            }
+
+    .fragment section[role=main] {
+        -ms-grid-row: 2;
+        height: 100%;
+        width: 100%;
+    }
+
+@media screen and (-ms-view-state: snapped) {
+    .fragment header[role=banner] {
+        -ms-grid-columns: auto 1fr;
+        margin-left: 20px;
+    }
+
+        .fragment header[role=banner] .win-backbutton {
+            margin: 0;
+            margin-right: 10px;
+            margin-top: 76px;
+        }
+
+            .fragment header[role=banner] .win-backbutton:disabled {
+                display: none;
+            }
+
+        .fragment header[role=banner] .titlearea {
+            -ms-grid-column: 2;
+            margin-left: 0;
+            margin-top: 68px;
+        }
+}
+
+@media screen and (-ms-view-state: fullscreen-portrait) {
+    .fragment header[role=banner] {
+        -ms-grid-columns: 100px 1fr;
+    }
+
+        .fragment header[role=banner] .win-backbutton {
+            margin-left: 29px;
+        }
+}
+
+
+
+/* BEGIN STYLING CHANGES */
+
+.titlearea {
+    text-indent: -9999px;
+    width: 241px;
+    height: 74px;
+    background: url('../images/theme/logo.png') no-repeat;
+}
+
+.win-backbutton {
+    background-color: transparent;
+    border-color: rgb(195, 61, 39);
+    color: rgb(195, 61, 39);
+}
+
+.win-backbutton:hover {
+    background-color: rgba(195, 61, 39, 0.13);
+    border-color: rgb(195, 61, 39);
+}
+
+.win-backbutton:hover:active {
+    background-color: rgb(195, 61, 39);
+    border-color: rgb(195, 61, 39);
+    color: rgb(251, 246, 224);
+}
+
+.win-backbutton:disabled, .win-backbutton:disabled:active {
+    background-color: transparent;
+    border-color: rgba(195, 61, 39, 0.4);
+    color: rgba(195, 61, 39, 0.4);
+}
+
+.win-appbar {
+   background-color: rgb(195, 61, 39);
+}
+
+
+
+
+.win-rating {
+    width: 70px;
+    margin-left: 2px;
+}
+
+.win-rating .win-star {
+    width: 14px;
+    height: 14px;
+    padding: 0px;
+    margin: 0px;
+    background-repeat: no-repeat;
+    background-origin: content-box; 
+    background-position: left;
+    background: url('../images/theme/rating-full.png') 0px 0px no-repeat;
+}
+
+.win-rating .win-star:before {
+    content: "";
+}
+
+.win-rating .win-star.win-empty 
+{
+    background: url('../images/theme/rating-empty.png') 0px 0px no-repeat;
+}
+
+.win-rating .win-star.win-full 
+{
+    background: url('../images/theme/rating-full.png') 0px 0px no-repeat;
+}
+
+
+
+
+@media screen and (-ms-view-state: snapped) {
+    .fragment header[role=banner] .titlearea {
+    text-indent: -9999px;
+        width: 180px;
+        height: 55px;
+        background: url('../images/theme/logo-small.png') no-repeat;
+        margin-left: 23px;
+        margin-top: 39px;
+    }
+
+
+    .fragment header[role=banner] .win-backbutton {
+       margin-top: 45px;
+    }
+}
+
+
+/* END STYLING CHANGES */
